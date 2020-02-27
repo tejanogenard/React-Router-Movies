@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route } from "react-router-dom" ;
 import SavedList from './Movies/SavedList';
 import MovieList from  "./Movies/MovieList";
-import MovieCard from "./Movies/MovieCard";
+import Movie from "./Movies/Movie";
 
 const App = () => {
   const [savedList, setSavedList] = useState( [] );
@@ -15,7 +15,7 @@ const App = () => {
     <div>
       <SavedList list={savedList} />
       <Route exact path = "/"><MovieList/></Route>
-      <Route excat path = "/Movies/:movieID"><MovieCard/></Route>
+      <Route exact path = "/Movies/:id"><Movie/></Route>
     </div>
   );
 };
